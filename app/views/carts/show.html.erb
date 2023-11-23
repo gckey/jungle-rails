@@ -4,6 +4,14 @@
     <h1>My Cart</h1>
   </header>
 
+  <% if enhanced_cart.empty? %>
+    <div>
+      <h2>Your cart is empty</h2>
+      <p>There are currently no item(s). Let us help you fill it!</p>
+      <%= link_to "Go to Home Page", root_path, class: "btn btn-primary"  %>
+    </div>
+  <% else %>
+
   <div class="panel panel-default items">
     <table class="table table-bordered">
       <thead>
@@ -48,5 +56,7 @@
       <% end %>
     </div>
   </div>
+
+  <% end %>
 
 </section>
