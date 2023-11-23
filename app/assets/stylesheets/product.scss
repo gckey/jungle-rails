@@ -87,5 +87,11 @@
       font-weight: 700;
       text-align: center;
     }
+
+    .btn:disabled,
+    .btn[disabled] {
+      opacity: 0.6; //to make it look disabled
+      cursor: not-allowed;
+    }
   }
 }
