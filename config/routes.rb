@@ -3,6 +3,14 @@ Rails.application.routes.draw do
   get 'about/index'
   root to: 'products#index'
 
+  # Routes to display users log-in form, log in, and log out
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  delete '/logout' => 'sessions#destroy'
+
+  get '/signup' => 'users#new'
+  post '/users' => 'users#create'
+
   resources :products, only: [:index, :show]
   resources :categories, only: [:show]
 

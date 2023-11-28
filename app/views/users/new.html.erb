@@ -1,0 +1,16 @@
+<section class="login">
+  <header class="page-header">
+    <h1>Register</h1>
+  </header>
+
+  <%= form_for :user, url: '/users', class: "form-group" do |f| %>
+    First Name: <%= f.text_field :first_name, class: "form-control", placeholder: "First Name" %>
+    Last Name: <%= f.text_field :last_name, class: "form-control", placeholder: "Last Name" %>
+    Email: <%= f.text_field :email, class: "form-control", placeholder: "alice@example.com" %>
+    Password: <%= f.password_field :password, class: "form-control", placeholder: "Password" %>
+    Password Confirmation: <%= f.password_field :password_confirmation, class: "form-control", placeholder: "Confirm Password" %>
+    <br>
+    <%= f.submit "Submit", class: "btn btn-primary" %>
+  <% end %>
+
+</section>
